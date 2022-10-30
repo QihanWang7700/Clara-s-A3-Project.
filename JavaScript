@@ -89,22 +89,22 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let mySprite: Sprite = null
 game.showLongText("Rules of the game: Use the buttons to help the man back home~", DialogLayout.Bottom)
 game.setDialogCursor(img`
-    . f f f . f f f f . f f f . 
-    f f f f f c c c c f f f f f 
-    f f f f b c c c c b f f f f 
-    f f f c 3 c c c c 3 c f f f 
-    . f 3 3 c c c c c c 3 3 f . 
-    . f c c c c 4 4 c c c c f . 
-    . f f c c 4 4 4 4 c c f f . 
-    . f f f b f 4 4 f b f f f . 
-    . f f 4 1 f d d f 1 4 f f . 
-    . . f f d d d d d d f f . . 
-    . . e f e 4 4 4 4 e f e . . 
-    . e 4 f b 3 3 3 3 b f 4 e . 
-    . 4 d f 3 3 3 3 3 3 c d 4 . 
-    . 4 4 f 6 6 6 6 6 6 f 4 4 . 
-    . . . . f f f f f f . . . . 
-    . . . . f f . . f f . . . . 
+    . . . . . . 5 . 5 . . . . . . . 
+    . . . . . f 5 5 5 f f . . . . . 
+    . . . . f 1 5 2 5 1 6 f . . . . 
+    . . . f 1 6 6 6 6 6 1 6 f . . . 
+    . . . f 6 6 f f f f 6 1 f . . . 
+    . . . f 6 f f d d f f 6 f . . . 
+    . . f 6 f d f d d f d f 6 f . . 
+    . . f 6 f d 3 d d 3 d f 6 f . . 
+    . . f 6 6 f d d d d f 6 6 f . . 
+    . f 6 6 f 3 f f f f 3 f 6 6 f . 
+    . . f f d 3 5 3 3 5 3 d f f . . 
+    . . f d d f 3 5 5 3 f d d f . . 
+    . . . f f 3 3 3 3 3 3 f f . . . 
+    . . . f 3 3 5 3 3 5 3 3 f . . . 
+    . . . f f f f f f f f f f . . . 
+    . . . . . f f . . f f . . . . . 
     `)
 game.splash("Let's Start!")
 music.baDing.play()
@@ -335,7 +335,7 @@ true
 )
 mySprite2.setPosition(8, 76)
 mySprite2.setVelocity(37, 0)
-mySprite2.follow(mySprite, 10)
+mySprite2.follow(mySprite, 8)
 let mySprite3 = sprites.create(img`
     ........................
     ........................
@@ -561,3 +561,4 @@ mySprite4.follow(mySprite, 8)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.doorClosedNorth)
+
